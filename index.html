@@ -11,3 +11,5 @@ chart_studio.tools.set_credentials_file(username='dina.chowdhury', api_key='mIZH
 
 import chart_studio.plotly as py
 py.plot(fig,filename='test',auto_open=True)
+import plotly.io as pio
+pio.write_html(fig, file=’index.html’, auto_open=True)
