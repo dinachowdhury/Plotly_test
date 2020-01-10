@@ -1,2 +1,15 @@
-https://github.com/dinachowdhury/Plotly_test.git
+import plotly.express as px
+gapminder = px.data.gapminder()
+fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
+           hover_name="country", log_x=True, size_max=60)
+fig.show()
+import chart_studio
+username='afrosebd2011'
+api_key='mIZHROauqrYM8wqRKZuz'
 
+chart_studio.tools.set_credentials_file(username='dina.chowdhury', api_key='mIZHROauqrYM8wqRKZuz')
+
+import chart_studio.plotly as py
+py.plot(fig,filename='test',auto_open=True)
+import chart_studio.tools as tls
+tls.get_embed('https://plot.ly/~dina.chowdhury/1/')
