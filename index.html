@@ -13,3 +13,5 @@ import chart_studio.plotly as py
 py.plot(fig,filename='test',auto_open=True)
 import chart_studio.tools as tls
 tls.get_embed('https://plot.ly/~dina.chowdhury/1/')
+import plotly.io as pio
+pio.write_html(fig, file=’index.html’, auto_open=True)
